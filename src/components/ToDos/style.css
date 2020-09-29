@@ -1,0 +1,24 @@
+.ToDos{
+    margin: 50px 0 0 50px;
+    height: 600px;
+    width: 350px;
+    background-color: #8dd1da;
+    border-radius: 10px;
+    position: relative;
+   
+}
+
+
+.ToDos p:first-child{
+    color: #dee9eb;
+    padding-top: 20px;
+    letter-spacing: 5px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.title{
+    color: #dee9eb;
+    padding-left: 20px;
+    font-size: 20px;
+}

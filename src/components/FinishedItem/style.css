@@ -1,0 +1,23 @@
+.itemFinished{
+    background-color: 8fd3dd;
+    height: 48px;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    box-shadow: 0px 3px 4px -1px rgba(225,228,230,1);
+    border: #99b7d2 solid 1px;
+    color: #ffffff;
+    text-decoration: line-through;
+    cursor: pointer;
+}
+.fa-plus-circle{
+    font-size: 40px;
+    color: azure;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -20px;
+    cursor: pointer;
+}
