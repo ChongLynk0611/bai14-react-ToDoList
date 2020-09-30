@@ -6,20 +6,14 @@ class UpcomingItem extends Component{
 
     
     render(){
-        let ToDoUpcoming = this.props.toDoUpcomings;
-
+        let toDo = this.props.toDo;
+       
         return(
-            <div className='UpcomingItem'>
-                {
-                    ToDoUpcoming.map((item , index) =>(
-                        <div className="item" key={index}>
-                            <span>{index}.</span>
-                            <span>{item}</span>    
-                        </div>
-                    ))
-
-                    
-                }
+            <div className='UpcomingItem'> 
+                <div className="item">
+                    <span>{toDo.index}.</span>
+                    <span>{toDo.item}</span>    
+                </div>
             </div>
 
         );

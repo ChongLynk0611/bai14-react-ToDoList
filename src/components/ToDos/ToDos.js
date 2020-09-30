@@ -11,8 +11,7 @@ class ToDos extends Component{
         this.state = {
             UpcomingLists : [
                 'lau nha',
-                'Cho meo an',
-                'Di cho'
+                'Cho meo an'
             ],
 
              Finisheds : [
@@ -21,14 +20,29 @@ class ToDos extends Component{
             ]
         }
     }
+    finish(index){
+        return() =>{
+            this.state.Finisheds.push(this.state.UpcomingLists[index]);
+        }
+        
+    }
     render(){
         return(
             <div className="ToDos">
                 <p> DAILIST </p>
                 <p className="title">Upcoming</p>
-                <UpcomingItem toDoUpcomings = {this.state.UpcomingLists} />
+                {
+                    this.state.UpcomingLists.map((item, index) =>(
+                        <UpcomingItem onClick={finish(index)} toDo={{item:item, index:index
+                        }}  key={index} />
+                    ))
+                }
                 <p className="title">Finished</p>
-                <FinishedItem toDoFinished = {this.state.Finisheds}></FinishedItem>
+                {
+                    this.state.Finisheds.map((item,index) => (
+                        <FinishedItem toDo = {{item:item, index:index}} />
+                    ))
+                }
                 <i class="fas fa-plus-circle"></i>
             </div>
 

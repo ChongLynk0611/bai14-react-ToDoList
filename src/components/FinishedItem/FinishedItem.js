@@ -4,17 +4,13 @@ import './style.css';
 
 class FinishedItem extends Component{
     render(){
-        let toDoFinished  = this.props.toDoFinished;
+        let toDoFinished  = this.props.toDo;
         return(
             <div className="FinishedItem">
-                {
-                    toDoFinished.map((item , index) =>(
-                        <div className="itemFinished" key={index}> 
-                            <span>{index}.</span>
-                            <span>{item}</span>
-                        </div>
-                    ))
-                }
+                <div className="itemFinished" > 
+                    <span>{toDoFinished.index}.</span>
+                    <span>{toDoFinished.item}</span>
+                </div>
             </div>
             
         );
